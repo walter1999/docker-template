@@ -2,6 +2,8 @@ version: '3.8'
 services:
   dev-enviroment:
     build: ./Docker-image
+    volumes: 
+      - ./wokring_dir
     expose: 
       - '22'
     ports:
