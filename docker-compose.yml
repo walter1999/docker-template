@@ -1,13 +1,14 @@
 version: '2.4'
 services:
-  dev-enviroment:
+  dev_enviroment:
     build: ./Docker-image
-    volumes: 
-      - ./wokring_dir
+    #volumes: 
+     # - ./wokring_dir
     expose: 
       - '22'
     ports:
       - '5001:22'
     stdin_open: true
     cpu_count: 2
-    mem_limit: 5000000000
+    cpuset: 0,1
+    mem_limit: '5000000000'
